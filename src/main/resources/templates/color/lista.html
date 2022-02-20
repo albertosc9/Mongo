@@ -1,0 +1,33 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Listar Colores</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>	
+	</head>
+	<body>
+		<h1>mostrando la lista de colores</h1>
+
+		<div th:switch="${colores}">
+		    <h2 th:case="null">No hay colores</h2>
+		    <div th:case="*">
+		            <h2 style="color:#069">Colores</h2>
+		            <table border="1">
+		                <thead>
+		                    <tr>
+		                        <th>Codigo color</th>
+		                        <th>Nombre</th>
+		                        <th>Código hexadecimal</th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+						<tr th:each="color: ${colores}">
+		                    <td th:text="${color.codigoColor}"></td>
+		                    <td th:text="${color.nombre}"></td>
+		                   	<td th:text="${color.codigoHexadecimal}"></td>
+		                   	
+		                </tr>
+		            </tbody>
+		        </table>
+		    </div>      
+		</div>
+	</body>
+</html>

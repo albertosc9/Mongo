@@ -1,0 +1,28 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Color</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>	
+	</head>
+	<body>
+		<h1>Mostrando el color seleccionado</h1>
+	
+		
+		<div th:if="${color.codigoColor}">
+		   <table border="1">
+			   		  <tr>
+			                <th>Código color</th>
+		                    <th>nombre</th>
+		                    <th>código Hexadecimal</th>
+		                    </tr>
+		   				<tbody>
+						<tr>
+		                    <td th:text="${color.codigoColor}"></td>
+		                    <td th:text="${color.nombre}"></td>
+		                   	<td th:text="${color.codigoHexadecimal}"</td>
+		             	</tr>
+		   </table>
+		    </div>      
+		</div>
+	
+	</body>
+</html>

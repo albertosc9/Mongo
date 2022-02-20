@@ -1,0 +1,35 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Linea</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>	
+	</head>
+	<body>
+		<h1>Mostrando la linea seleccionada</h1>
+	
+		
+		<div th:if="${linea.codigoLinea}">
+		   <table border="1">
+			   		  <tr>
+			                <th>Código linea</th>
+		                    <th>nombre corto</th>
+		                    <th>nombre largo</th>
+		                     <th>km</th>
+		                    <th>codigo color</th>
+		                    <th>nombre color</th>
+		                     <th>codigo hexadecimal</th>
+		                    </tr>
+		   				<tbody>
+						<tr>
+		                    <td th:text="${linea.codigoLinea}"></td>
+		                    <td th:text="${linea.nombreCorto}"></td>
+		                   	<td th:text="${linea.nombreLargo}"></td>
+		                   	 <td th:text="${linea.kilometros}"></td>
+		                    <td th:text="${linea.color.codigoColor}"></td>
+		                     <td th:text="${linea.color.nombre}"></td>
+		                    <td th:text="${linea.color.codigoHexadecimal}"></td>
+		             	</tr>
+		   </table>
+		    </div>      
+
+	</body>
+</html>

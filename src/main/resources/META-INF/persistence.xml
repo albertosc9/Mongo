@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	
+	<!-- Unidad Persistencia ObjectDB --> 
+	<persistence-unit name="RedMetroBD" transaction-type="RESOURCE_LOCAL">
+		<provider>com.objectdb.jpa.Provider</provider>
+		<!-- Clases a "mapear" --> 
+		<class>es.redmetro.asc.vo.Color"</class>
+		<class>es.redmetro.asc.vo.Linea"</class>        
+
+		<properties>
+		  <property name="javax.persistence.jdbc.url" value="objectdb://localhost:6136/RedMetro12"/>
+		  <property name="javax.persistence.jdbc.user" value="admin"/>
+		  <property name="javax.persistence.jdbc.password" value="admin"/>
+		</properties>
+	</persistence-unit>
+
+	<!-- Unidad Persistencia Hibernate -->
+	
+</persistence>  
